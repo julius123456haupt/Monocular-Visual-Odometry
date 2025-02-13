@@ -30,7 +30,7 @@ Aus den guten Matches kann ich mir dann wieder die Indizes der entsprechenden De
 Da ich nun alle guten Keypoints aus den vorherigen und dem aktuellen Frame habe, sowie meine Kameramatrix bekannt ist (ich habe alles am KITTI-Datensatz implementiert), kann nun die Essential Matrix berechnet werden. Aber was genau bringt mir die Essential Matrix?
 Da ich nun alle guten Keypoints habe aus den vorherigen und dem aktuellen Frame, sowie meine Kameramtrix bekannt ist (ich habe alles am KITTI Datensatz implementiert) kann nun die Essential Matrix berechnet werden. Aber was genau bringt mir die Essential Matrix ?
 
-![Feature matching](featurematch.png)
+![Feature matching](featurematch2.png)
 
 # Was ist die Essential Matrix?
 
