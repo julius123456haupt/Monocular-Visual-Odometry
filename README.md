@@ -30,6 +30,8 @@ Aus den guten Matches kann ich mir dann wieder die Indizes der entsprechenden De
 Da ich nun alle guten Keypoints aus den vorherigen und dem aktuellen Frame habe, sowie meine Kameramatrix bekannt ist (ich habe alles am KITTI-Datensatz implementiert), kann nun die Essential Matrix berechnet werden. Aber was genau bringt mir die Essential Matrix?
 Da ich nun alle guten Keypoints habe aus den vorherigen und dem aktuellen Frame, sowie meine Kameramtrix bekannt ist (ich habe alles am KITTI Datensatz implementiert) kann nun die Essential Matrix berechnet werden. Aber was genau bringt mir die Essential Matrix ?
 
+![Feature matching](Bildschirm­foto 2025-02-13 um 01.24.15.png)
+
 # Was ist die Essential Matrix?
 
 Mit Hilfe der Essential Matrix kann die epipolare Geometrie (also wie verhalten sich zwei Bilder zueinander) zwischen zwei aufeinanderfolgenden Frames beschrieben werden. Dafür benötigt sie die zuvor beschriebenen x, y Positionen der Keypoints aus beiden Frames und die Kameramatrix (intrinsische Kameraparameter). Falls diese nicht bekannt ist, kann auch die Fundamental Matrix berechnet werden. Zudem werden hier mit RANSAC sogenannte Ausreißer aus den Feature-Matches herausgefiltert, indem es wiederholt zufällige Punktpaare auswählt und die Lösung basierend auf der Anzahl der Inlier validiert. All dies ermöglicht letztendlich die Berechnung der relativen Pose (Rotation und Translation) der Kamera.
@@ -51,6 +53,8 @@ Die absolute Pose der Kamera wird durch die Multiplikation der inversen relative
 # Zusammenfassung
 
 Die Pose Estimation ist ein zentraler Schritt in der visuellen Odometrie, da sie die Bewegung der Kamera zwischen zwei Frames quantifiziert. Durch die Dekomposition der Essential Matrix, die Triangulation von 3D-Punkten und die Aktualisierung der Pose wird die Position und Orientierung der Kamera kontinuierlich aktualisiert. Dies ermöglicht es, die Trajektorie der Kamera über die Zeit zu verfolgen und so die Bewegung in der Szene zu rekonstruieren.
+
+![Feature matching](Finlfinaltraj.png)
 
 # Fazit 
 
